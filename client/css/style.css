@@ -1,0 +1,12 @@
+body{
+    background-color: #5677fc;
+}
+
+h1 {
+    color: #ffffff;
+}
+textarea.email{
+    width: 50%;
+    border-radius: 3;
+    height: 10em;
+}

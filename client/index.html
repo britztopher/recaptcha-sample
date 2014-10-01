@@ -1,0 +1,99 @@
+<html ng-app="myApp">
+<head>
+    <link rel='stylesheet' href='lib/bootstrap/dist/css/bootstrap.css' type='text/css'/>
+    <link rel='stylesheet' href='css/style.css' type='text/css'/>
+
+</head>
+<body ng-controller="RecaptchaCtrl">
+
+<div class="container">
+    <h1>HERRRO</h1>
+    <header class="row">
+        <h2 class="col-lg-12">Contact Superman</h2>
+    </header>
+
+    <form name="customer" ng-submit="send(custEmail)" class="modal-overflow">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="input-group input-group-md">
+                    <span class="input-group-addon"> Email To:</span>
+                    <input class="form-control" ng-model="email.to" type="email" disabled required/>
+                </div>
+            </div>
+
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="input-group input-group-md">
+                    <span class="input-group-addon"> Name:</span>
+                    <input class="form-control" ng-model="email.name" type="text" required/>
+                </div>
+            </div>
+        </div>
+        <br/>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="input-group input-group-md">
+                    <span class="input-group-addon"> Subject:</span>
+                    <input class="form-control" ng-model="email.subject" type="text" required/>
+                </div>
+            </div>
+        </div>
+        <br/>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="input-group">
+                    <span class="input-group-addon"> Message</span>
+                    <textarea class="email" name="message" ng-model="email.body" required></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <label>Prove that you are a Human and Enter the following in Text Field</label>
+
+                <div re-captcha ng-model="email.captcha">
+
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div>
+                    {{message}}
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-lg-2">
+
+                <button type="submit" class="btn btn-primary center-block">
+                    <span class="glyphicon glyphicon-send"></span> Send
+                </button>
+            </div>
+            <div class="col-lg-2">
+                <button class="btn btn-warning center-block" ng-click="cancel()">
+                    <span class="glyphicon glyphicon-remove-circle"></span> Cancel
+                </button>
+            </div>
+        </div>
+
+    </form>
+</div>
+{{message}}
+
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-re-captcha/angular-re-captcha.js"></script>
+
+<!--MY ANGULAR FILES-->
+<script src="/app.js"></script>
+
+
+</body>
+
+</html>

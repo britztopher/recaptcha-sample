@@ -1,0 +1,24 @@
+{
+  "name": "recaptcha-sample",
+  "version": "0.0.0",
+  "homepage": "https://github.com/britztopher/recaptcha-sample",
+  "authors": [
+    "britztopher <britztopher@gmail.com>"
+  ],
+  "description": "sample recaptcha",
+  "main": "bin/www",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./client/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.25",
+    "bootstrap": "~3.2.0",
+    "angular-re-captcha": "~0.0.3"
+  }
+}
