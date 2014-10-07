@@ -12,6 +12,8 @@ router.get('/', function (req, res) {
 router.post('/email/send', function (req, res) {
 
     var sender = req.body;
+    var response = res;
+    console.log(sender);
 
     //send request to recaptcha verification server
     request.post('http://www.google.com/recaptcha/api/verify', {
@@ -28,9 +30,9 @@ router.post('/email/send', function (req, res) {
             //validation, if it doesnt verification passed
             if (body.match(/false/) === null) {
 
-               res.send(200,'email sent');
+               response.send(200,'email sent');
             } else {
-                res.send(500, {message: "Recaptcha Validation Failed.  Please Re-Enter the reCAPTCHA challenge."})
+                response.send(500, {message: "Recaptcha Validation Failed.  Please Re-Enter the reCAPTCHA challenge.", err: err})
             }
 
         }

@@ -17,8 +17,9 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.2.25",
+    "angular": "~1.2.26",
     "bootstrap": "~3.2.0",
-    "angular-re-captcha": "~0.0.3"
+    "angular-re-captcha": "~0.0.3",
+    "angular-resource": "~1.2.26"
   }
 }

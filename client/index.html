@@ -12,7 +12,7 @@
         <h2 class="col-lg-12">Contact Superman</h2>
     </header>
 
-    <form name="customer" ng-submit="send(custEmail)" class="modal-overflow">
+    <form name="customer" ng-submit="send(email)" ng-model="email" class="modal-overflow">
         <div class="row">
             <div class="col-lg-6">
                 <div class="input-group input-group-md">
@@ -72,7 +72,7 @@
         <div class="row">
             <div class="col-lg-2">
 
-                <button type="submit" class="btn btn-primary center-block">
+                <button type="submit"  ng-click="submit(email)" class="btn btn-danger center-block">
                     <span class="glyphicon glyphicon-send"></span> Send
                 </button>
             </div>
@@ -89,6 +89,8 @@
 
 <script src="lib/angular/angular.js"></script>
 <script src="lib/angular-re-captcha/angular-re-captcha.js"></script>
+<script src="lib/angular-resource/angular-resource.min.js"></script>
+
 
 <!--MY ANGULAR FILES-->
 <script src="/app.js"></script>
